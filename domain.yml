@@ -1,0 +1,55 @@
+version: "2.0"
+
+intents:
+  - greet
+  - order_drink
+  - specify_temperature
+  - specify_quantity
+
+entities:
+  - drink_type
+  - temperature
+  - quantity
+
+slots:
+  drink_type:
+    type: categorical
+    values:
+        - "아메리카노"
+        - "카페라떼"
+        - "카푸치노"
+        - "카라멜 마끼아또"
+        - "아아"
+    influence_conversation: true
+
+  temperature:
+    type: categorical
+    values:
+        - "따뜻하게"
+        - "차갑게"
+    influence_conversation: true
+
+  quantity:
+    type: text
+    influence_conversation: true
+
+responses:
+  utter_greet:
+    - text: "안녕하세요! 주문을 도와드릴게요"
+
+  utter_ask_temperature:
+    - text: "따뜻하게 드릴까요? 차갑게 드릴까요?"
+
+  utter_ask_quantity:
+    - text: "몇 잔 드릴까요?"
+
+  utter_confirm_order:
+    - text: "{drink_type} {temperature} {quantity} 접수됐습니다."
+
+actions:
+  - utter_greet
+  - utter_ask_temperature
+  - utter_ask_quantity
+  - utter_confirm_order
+  - action_reset_slots
+  - action_set_drink_type_and_temperature

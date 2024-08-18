@@ -1,0 +1,44 @@
+version: "2.0"
+stories:
+
+- story: 주문 아메리카노 (음료만 정보 제공, 이후 따뜻하게, 한 잔)
+  steps:
+    - intent: order_drink
+      entities:
+        - drink_type: "아메리카노"
+    - action: action_set_drink_type_and_temperature
+    - intent: specify_temperature
+    - action: utter_ask_quantity
+    - intent: specify_quantity
+    - action: utter_confirm_order
+    - action: action_reset_slots
+    - action: utter_greet
+    - action: action_listen
+
+
+- story: 주문 아아 (온도 자동 설정)
+  steps:
+    - intent: order_drink
+      entities:
+        - drink_type: "아아"
+    - action: action_set_drink_type_and_temperature
+    - intent: specify_quantity
+    - action: utter_confirm_order
+    - action: action_reset_slots
+    - action: utter_greet
+    - action: action_listen
+
+
+- story: 주문 카라멜 마끼아또 (온도와 수량 선택 후 주문)
+  steps:
+    - intent: order_drink
+      entities:
+        - drink_type: "카라멜 마끼아또"
+    - action: action_set_drink_type_and_temperature
+    - intent: specify_temperature
+    - action: utter_ask_quantity
+    - intent: specify_quantity
+    - action: utter_confirm_order
+    - action: action_reset_slots
+    - action: utter_greet
+    - action: action_listen

@@ -1,0 +1,51 @@
+#nlu.yml:
+version: "2.0"
+nlu:
+  - intent: greet
+    examples: |
+      - 좋은 아침
+      - 안녕하세요
+      - 반가워
+      - 안녕
+
+  - intent: order_drink
+    examples: |
+      - [아메리카노](drink_type) 주세요.
+      - [카페라떼](drink_type) 주세요.
+      - [아이스티](drink_type) 주세요.
+      - [카푸치노](drink_type) 부탁해요.
+      - [에스프레소](drink_type) 주문할게요.
+      - [카페모카](drink_type) 주세요.
+      - [카페라떼](drink_type) 주세요.
+      - [아메리카노](drink_type) 주문할게요.
+      - [아아](drink_type) 주세요.
+      - [아아](drink_type) 주세요.
+      - [카라멜마끼아또](drink_type) 주세요.
+
+  - intent: specify_temperature
+    examples: |
+      - [차갑게](temperature)요
+      - [차갑게](temperature)용
+      - [차갑게](temperature)
+      - [차갑게](temperature) 주세요.
+      - [따뜻하게](temperature)주세요.
+      - [아이스](temperature)로 주세요.
+      - [따뜻한](temperature)걸로 주세요.
+      - [차갑게](temperature)주세요.
+      - [따뜻하게](temperature) 주세요.
+      - [ICE](temperature)요
+      - [ICE](temperature)용
+      - [ICE](temperature)로 주세요.
+
+  - intent: specify_quantity
+    examples: |
+      - [두 잔](quantity) 주세요.
+      - [하나](quantity)주세요.
+      - [세 잔](quantity) 부탁해요.
+      - [네 잔](quantity)주세요.
+      - [한 잔](quantity) 주문할게요.
+      - [두 개](quantity) 주세요.
+      - [세 잔](quantity) 부탁드려요.
+
+
+    

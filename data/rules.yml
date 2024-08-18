@@ -1,0 +1,41 @@
+version: "2.0"
+rules:
+
+- rule: greet and ask for order
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: handle drink type and temperature
+  condition:
+    - slot_was_set:
+        - drink_type
+  steps:
+    - action: action_set_drink_type_and_temperature
+
+- rule: ask for quantity after temperature
+  condition:
+    - slot_was_set:
+        - temperature
+  steps:
+    - action: utter_ask_quantity
+
+- rule: confirm order if all slots are filled
+  condition:
+    - slot_was_set:
+        - drink_type
+    - slot_was_set:
+        - temperature
+    - slot_was_set:
+        - quantity
+  steps:
+    - action: utter_confirm_order
+    - action: action_reset_slots
+    - action: utter_greet
+    - action: action_listen
+
+- rule: resume conversation after order
+  steps:
+    - action: action_reset_slots
+    - action: utter_greet
+    - action: action_listen
