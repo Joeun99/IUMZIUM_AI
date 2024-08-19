@@ -1,26 +1,95 @@
-#nlu.yml:
 version: "2.0"
 nlu:
   - intent: greet
     examples: |
-      - 좋은 아침
+      - 좋은 아침입니다
       - 안녕하세요
       - 반가워
-      - 안녕
+      - 주문할게요
+
+  - intent: ask_how_to_use
+    examples: |
+      - 이용 방법 알려줘
+      - 어떻게 이용해?
+      - 사용법 알려줘
+      - 주문 방법 설명해줘
+      - 챗봇 사용법이 뭐야?
+
+  - intent: ask_recommendation
+    examples: |
+      - 뭐 마실지 추천해줘
+      - 메뉴 추천해줘
+      - 뭐가 맛있어?
+      - 추천 메뉴 뭐야?
+      - 오늘 뭐 마시면 좋을까?
+
+
 
   - intent: order_drink
     examples: |
       - [아메리카노](drink_type) 주세요.
+      - [아메리카노](drink_type)주세요.
       - [카페라떼](drink_type) 주세요.
-      - [아이스티](drink_type) 주세요.
+      - [카페라떼](drink_type)주세요.
+      - [연유라떼](drink_type) 하나 주세요.
+      - [연유라떼](drink_type)하나 주세요.
+      - [바닐라라떼](drink_type)로 부탁드려요.
+      - [바닐라라떼](drink_type)로부탁드려요.
       - [카푸치노](drink_type) 부탁해요.
-      - [에스프레소](drink_type) 주문할게요.
+      - [카푸치노](drink_type)부탁해요.
+      - [카라멜 마끼아또](drink_type) 주세요.
+      - [카라멜 마끼아또](drink_type)주세요.
       - [카페모카](drink_type) 주세요.
-      - [카페라떼](drink_type) 주세요.
-      - [아메리카노](drink_type) 주문할게요.
+      - [카페모카](drink_type)주세요.
+      - [아인슈페너](drink_type) 주세요.
+      - [아인슈페너](drink_type)주세요.
       - [아아](drink_type) 주세요.
-      - [아아](drink_type) 주세요.
-      - [카라멜마끼아또](drink_type) 주세요.
+      - [아아](drink_type)주세요.
+      - [아아](drink_type) 부탁해요.
+      - [아아](drink_type) 주문할게요.
+      - [아아](drink_type)로 주세요.
+      - [복숭아티](drink_type) 주세요.
+      - [복숭아티](drink_type)주세요.
+      - [리치캐모마일](drink_type) 주세요.
+      - [리치캐모마일](drink_type)주세요.
+      - [청귤얼그레이](drink_type) 주세요.
+      - [청귤얼그레이](drink_type)주세요.
+      - [트리플민트](drink_type) 주세요.
+      - [트리플민트](drink_type)주세요.
+      - [애플히비스커스](drink_type)로 주세요.
+      - [애플히비스커스](drink_type)로주세요.
+      - [허나유자티](drink_type)로 주세요.
+      - [허나유자티](drink_type)로주세요.
+      - [허니자몽티](drink_type) 부탁해요.
+      - [허니자몽티](drink_type)부탁해요.
+      - [허니레몬티](drink_type)로 할게요.
+      - [허니레몬티](drink_type)로할게요.
+      - [레몬에이드](drink_type) 주세요.
+      - [레몬에이드](drink_type)주세요.
+      - [히비스커스에이드](drink_type)로 주세요.
+      - [히비스커스에이드](drink_type)로주세요.
+      - [블루베리에이드](drink_type)로 부탁드려요.
+      - [블루베리에이드](drink_type)로부탁드려요.
+      - [자몽에이드](drink_type)로 주세요.
+      - [자몽에이드](drink_type)로주세요.
+      - [디카페인 아메리카노](drink_type)로 할게요.
+      - [디카페인 아메리카노](drink_type)로할게요.
+      - [디카페인 카페라떼](drink_type) 주세요.
+      - [디카페인 카페라떼](drink_type)주세요.
+      - [디카페인 카라멜 마끼아또](drink_type)로 주세요.
+      - [디카페인 카라멜 마끼아또](drink_type)로주세요.
+      - [디카페인 카푸치노](drink_type) 부탁해요.
+      - [디카페인 카푸치노](drink_type)부탁해요.
+      - [디카페인 바닐라라떼](drink_type) 하나 주세요.
+      - [디카페인 바닐라라떼](drink_type)하나 주세요.
+      - [디카페인 카페모카](drink_type) 주문할게요.
+      - [디카페인 카페모카](drink_type)주문할게요.
+      - [디카페인 연유라떼](drink_type)로 할게요.
+      - [디카페인 연유라떼](drink_type)로할게요.
+      - [디카페인 아인슈페너](drink_type) 주세요.
+      - [디카페인 아인슈페너](drink_type)주세요.
+
+
 
   - intent: specify_temperature
     examples: |
@@ -36,16 +105,269 @@ nlu:
       - [ICE](temperature)요
       - [ICE](temperature)용
       - [ICE](temperature)로 주세요.
+      - [미지근하게]주세요.
+
+  - synonym: 차갑게
+    examples: |
+      - 아이스
+      - ICE
+      - 차아갑게
+
+  - synonym: 따뜻하게
+    examples: |
+      - 따끈하게
+      - 뜨겁게
+      - 따듯하게
+      - 따숩게
+      - hot
+      - 미지근하게
 
   - intent: specify_quantity
     examples: |
-      - [두 잔](quantity) 주세요.
-      - [하나](quantity)주세요.
+      - [한 잔](quantity) 주세요.
+      - [하나](quantity) 주세요.
+      - [1잔](quantity) 부탁해요.
+      - [2개](quantity) 주세요.
+      - [두 잔](quantity) 부탁드려요.
       - [세 잔](quantity) 부탁해요.
-      - [네 잔](quantity)주세요.
-      - [한 잔](quantity) 주문할게요.
-      - [두 개](quantity) 주세요.
-      - [세 잔](quantity) 부탁드려요.
+      - [네 잔](quantity) 주세요.
+      - [한 개](quantity)로 할게요.
+      - [두 개](quantity)로 주세요.
+      - [세 개](quantity)로 할게요.
+
+  - synonym: "1"
+    examples: |
+      - 한 잔
+      - 한잔
+      - 1잔
+      - 1 잔
+      - 하나
+      - 한 개
+      - 한개
+      - 1개
+      - 1 개
+      - 하
+      - 한
+      - 한잔만
+
+  - synonym: "2"
+    examples: |
+      - 두 잔
+      - 두잔
+      - 2잔
+      - 2 잔
+      - 두 개
+      - 두개
+      - 2개
+      - 2 개
+      - 두
+      - 둘
+
+  - synonym: "3"
+    examples: |
+      - 세 잔
+      - 세잔
+      - 3잔
+      - 3 잔
+      - 세 개
+      - 세개
+      - 3개
+      - 3 개
+      - 세
+
+  - synonym: "4"
+    examples: |
+      - 네 잔
+      - 네잔
+      - 4잔
+      - 4 잔
+      - 네 개
+      - 네개
+      - 4개
+      - 4 개
+      - 네
+
+  - synonym: "5"
+    examples: |
+      - 다섯 잔
+      - 다섯잔
+      - 5잔
+      - 5 잔
+      - 다섯 개
+      - 다섯개
+      - 5개
+      - 5 개
+      - 다
+
+  - synonym: "6"
+    examples: |
+      - 여섯 잔
+      - 여섯잔
+      - 6잔
+      - 6 잔
+      - 여섯 개
+      - 여섯개
+      - 6개
+      - 6 개
+      - 여
+
+  - synonym: "7"
+    examples: |
+      - 일곱 잔
+      - 일곱잔
+      - 7잔
+      - 7 잔
+      - 일곱 개
+      - 일곱개
+      - 7개
+      - 7 개
+      - 일
+
+  - synonym: "8"
+    examples: |
+      - 여덟 잔
+      - 여덟잔
+      - 8잔
+      - 8 잔
+      - 여덟 개
+      - 여덟개
+      - 8개
+      - 8 개
+      - 여
+
+  - synonym: "9"
+    examples: |
+      - 아홉 잔
+      - 아홉잔
+      - 9잔
+      - 9 잔
+      - 아홉 개
+      - 아홉개
+      - 9개
+      - 9 개
+      - 아
+
+  - intent: ask_menu_list
+    examples: |
+      - 여기 메뉴가 뭐뭐 있어요?
+      - 메뉴 알려주세요.
+      - 마실게 뭐가 있나요?
+      - 마실 것 있나요?
+      - 메뉴 목록 좀 알려주세요.
+      - 어떤 음료가 있나요?
+      - 메뉴가 어떻게 되나요?
+      - 카페에 뭐가 있어요?
+      - 메뉴 보여주세요.
 
 
+
+  - intent: specify_size
+    examples: |
+      - [톨](size) 사이즈로 주세요.
+      - [grande](size) 주세요.
+      - [vent](size)로 부탁드려요.
+      - [토올](size)로 주세요.
+      - [grande](size) 사이즈로 주세요.
+      - [venti](size)로 주세요.
+      - [tal](size)로 주세요.
+      - [그란데](size)로 해주세요.
+      - [venti](size) 사이즈로 해주세요.
+      - [tall](size) 사이즈 부탁드립니다.
+      - [그런데](size)로 주실 수 있나요?
+      - [venti](size)로 할게요.
+      - [tall](size)로 부탁합니다.
+      - [grande](size)로 해 주실래요?
+      - [벤티](size) 사이즈로 주시겠어요?
+      - 사이즈는 [tall](size)로 주세요.
+      - [그란대](size)로 부탁드려요.
+      - [밴티](size) 사이즈로 부탁드립니다.
+      - [tall](size)로 주문할게요.
+      - [grande](size)로 주문할게요.
+      - [붼티](size)로 해 주실래요?
+      - [tall](size)로 하겠습니다.
+      - [grande](size) 사이즈로 부탁드립니다.
+      - [빈티](size)로 해주세요.
+      - [톨](size)로 주실래요?
+  
+  
+  - synonym: "tall"
+    examples: |
+      - 톨
+      - tal
+      - 토올
+      - tall
+
+  - synonym: "grande"
+    examples: |
+      - 그란데
+      - 그란대
+      - 그런데
+      - 그런대
+      - 그란
+      - grand
+
+  - synonym: "venti"
+    examples: |
+      - 벤티
+      - 붼티
+      - 빈티
+      - 밴티
+      - ven
+      - vent
+
+
+  - intent: specify_syrup
+    examples: |
+      - [헤이즐넛](syrup) 시럽 추가해주세요.
+      - [바닐라](syrup)로 주세요.
+      - [바닐라](syrup) 추가해 주세요.
+      - 시럽은 [바닐리](syrup)로 할게요.
+      - [헤이즐넛](syrup) 넣어주세요.
+      - [바아닐라](syrup) 추가해 주세요.
+      - [헤이즐넛](syrup)으로 해 주세요.
+      - [바닐라](syrup) 시럽 넣어주세요.
+      - [hazelnuts](syrup) 추가할게요.
+      - [바닐라](syrup) 넣어주실 수 있나요?
+      - 시럽은 [hazelnut](syrup)으로 부탁드립니다.
+      - [바닐라](syrup) 시럽 추가하고 싶어요.
+      - 시럽을 [헤이즐](syrup)로 바꿔주세요.
+      - [바닐](syrup) 시럽으로 부탁드려요.
+      - [헤이즐넛](syrup) 넣어주실래요?
+      - 시럽은 추가 [안할게요](syrup).
+      - 시럽 [안합니다](syrup)
+      - 시럽은 [안 할게요](syrup)
+      - 시럽 [안할게요](syrup).
+      - 시럽 [안 함](syrup)으로 해주세요.
+      - [안할게요](syrup)
+      - [안합니다](syrup)
+      - [빼주세요](syrup)
+      - [안 넣을게요](syrup)
+      - [안 넣어요](syrup)
+      - [빼주세요](syrup)
+      - [안 넣음](syrup)
     
+  - synonym: "안 함"
+    examples: |
+      - 안할게요
+      - 안합니다
+      - 안 넣을게요
+      - 안 넣어요
+      - 빼주세요
+      - 안 넣음
+      - 안
+
+  - synonym: "바닐라"
+    examples: |
+      - 바닐
+      - 바닐리
+      - 바아닐라
+      - 바아니일라
+      - vanlia
+
+  - synonym: "헤이즐넛"
+    examples: |
+      - 헤이
+      - 헤이즐
+      - hazelnuts
+      - hazelnut
+      - 헤이즐럿

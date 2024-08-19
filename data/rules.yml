@@ -6,19 +6,22 @@ rules:
     - intent: greet
     - action: utter_greet
 
-- rule: handle drink type and temperature
-  condition:
-    - slot_was_set:
-        - drink_type
+- rule: Provide usage instructions
   steps:
-    - action: action_set_drink_type_and_temperature
+    - intent: ask_how_to_use
+    - action: utter_how_to_use
 
-- rule: ask for quantity after temperature
-  condition:
-    - slot_was_set:
-        - temperature
+- rule: Recommend a menu
   steps:
-    - action: utter_ask_quantity
+    - intent: ask_menu_recommendation
+    - action: utter_recommend_menu
+
+
+- rule: Respond to menu list inquiry
+  steps:
+    - intent: ask_menu_list
+    - action: utter_menu_list
+
 
 - rule: confirm order if all slots are filled
   condition:
@@ -27,6 +30,10 @@ rules:
     - slot_was_set:
         - temperature
     - slot_was_set:
+        - size
+    - slot_was_set:
+        - syrup
+    - slot_was_set:
         - quantity
   steps:
     - action: utter_confirm_order
@@ -34,8 +41,54 @@ rules:
     - action: utter_greet
     - action: action_listen
 
+- rule: ask for quantity after syrup
+  condition:
+    - slot_was_set:
+        - drink_type
+    - slot_was_set:
+        - temperature
+    - slot_was_set:
+        - size
+    - slot_was_set:
+        - syrup
+  steps:
+    - action: utter_ask_quantity
+
+
+- rule: ask for syrup after size
+  condition:
+    - slot_was_set:
+        - drink_type
+    - slot_was_set:
+        - temperature
+    - slot_was_set:
+        - size
+  steps:
+    - action: utter_ask_syrup
+
+
+- rule: ask for size after temperature
+  condition:
+    - slot_was_set:
+        - drink_type
+    - slot_was_set:
+        - temperature
+  steps:
+    - action: utter_ask_size
+
+
+- rule: handle drink type and temperature
+  condition:
+    - slot_was_set:
+        - drink_type
+  steps:
+    - action: action_set_drink_type_and_temperature
+
+
 - rule: resume conversation after order
   steps:
     - action: action_reset_slots
     - action: utter_greet
     - action: action_listen
+
+

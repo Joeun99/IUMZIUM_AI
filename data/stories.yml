@@ -1,13 +1,17 @@
 version: "2.0"
 stories:
 
-- story: 주문 아메리카노 (음료만 정보 제공, 이후 따뜻하게, 한 잔)
+- story: 주문 아메리카노
   steps:
     - intent: order_drink
       entities:
         - drink_type: "아메리카노"
     - action: action_set_drink_type_and_temperature
     - intent: specify_temperature
+    - action: utter_ask_size
+    - intent: specify_size
+    - action: utter_ask_syrup
+    - intent: specify_syrup
     - action: utter_ask_quantity
     - intent: specify_quantity
     - action: utter_confirm_order
@@ -22,23 +26,147 @@ stories:
       entities:
         - drink_type: "아아"
     - action: action_set_drink_type_and_temperature
-    - intent: specify_quantity
-    - action: utter_confirm_order
-    - action: action_reset_slots
-    - action: utter_greet
-    - action: action_listen
-
-
-- story: 주문 카라멜 마끼아또 (온도와 수량 선택 후 주문)
-  steps:
-    - intent: order_drink
-      entities:
-        - drink_type: "카라멜 마끼아또"
-    - action: action_set_drink_type_and_temperature
-    - intent: specify_temperature
+    - intent: specify_size
+    - action: utter_ask_syrup
+    - intent: specify_syrup
     - action: utter_ask_quantity
     - intent: specify_quantity
     - action: utter_confirm_order
     - action: action_reset_slots
     - action: utter_greet
     - action: action_listen
+
+
+- story: 주문 카라멜마끼아또
+  steps:
+    - intent: order_drink
+      entities:
+        - drink_type: "카라멜마끼아또"
+    - action: action_set_drink_type_and_temperature
+    - intent: specify_temperature
+    - action: utter_ask_size
+    - intent: specify_size
+    - action: utter_ask_syrup
+    - intent: specify_syrup
+    - action: utter_ask_quantity
+    - intent: specify_quantity
+    - action: utter_confirm_order
+    - action: action_reset_slots
+    - action: utter_greet
+    - action: action_listen
+
+- story: Show menu list
+  steps:
+  - intent: ask_menu_list
+  - action: utter_menu_list
+
+- story: 주문 카페라떼
+  steps:
+    - intent: order_drink
+      entities:
+        - drink_type: "카페라떼"
+    - action: action_set_drink_type_and_temperature
+    - intent: specify_temperature
+    - action: utter_ask_size
+    - intent: specify_size
+    - action: utter_ask_syrup
+    - intent: specify_syrup
+    - action: utter_ask_quantity
+    - intent: specify_quantity
+    - action: utter_confirm_order
+    - action: action_reset_slots
+    - action: utter_greet
+    - action: action_listen
+
+
+- story: 블루베리에이드 주문
+  steps:
+    - intent: order_drink
+      entities:
+        - drink_type: 블루베리에이드
+    - action: action_set_drink_type_and_temperature
+    - intent: specify_temperature
+      entities:
+        - temperature: 차갑게
+    - action: utter_ask_size
+    - intent: specify_size
+      entities:
+        - size: tall
+    - action: utter_ask_syrup
+    - intent: specify_syrup
+      entities:
+        - syrup: 바닐라
+    - action: utter_ask_quantity
+    - intent: specify_quantity
+      entities:
+        - quantity: 5
+    - action: utter_confirm_order
+    - action: action_reset_slots
+    - action: utter_greet
+    - action: action_listen
+
+
+- story: 연유라떼 주문
+  steps:
+    - intent: order_drink
+      entities:
+        - drink_type: 연유라떼
+    - action: action_set_drink_type_and_temperature
+    - intent: specify_temperature
+      entities:
+        - temperature: 차갑게
+    - action: utter_ask_size
+    - intent: specify_size
+      entities:
+        - size: grande
+    - action: utter_ask_syrup
+    - intent: specify_syrup
+      entities:
+        - syrup: 안 함
+    - action: utter_ask_quantity
+    - intent: specify_quantity
+      entities:
+        - quantity: 1
+    - action: utter_confirm_order
+    - action: action_reset_slots
+    - action: utter_greet
+    - action: action_listen
+
+- story: 카푸치노 주문
+  steps:
+    - intent: order_drink
+      entities:
+        - drink_type: 카푸치노
+    - action: action_set_drink_type_and_temperature
+    - intent: specify_temperature
+      entities:
+        - temperature: 따뜻하게
+    - action: utter_ask_size
+    - intent: specify_size
+      entities:
+        - size: venti
+    - action: utter_ask_syrup
+    - intent: specify_syrup
+      entities:
+        - syrup: 헤이즐넛
+    - action: utter_ask_quantity
+    - intent: specify_quantity
+      entities:
+        - quantity: 3
+    - action: utter_confirm_order
+    - action: action_reset_slots
+    - action: utter_greet
+    - action: action_listen
+
+
+- story: 이용 방법 안내
+  steps:
+    - intent: ask_how_to_use
+    - action: utter_how_to_use
+
+
+- story: 메뉴 추천
+  steps:
+    - intent: ask_recommendation
+    - action: action_recommend_menu
+    - action: utter_recommend_menu
