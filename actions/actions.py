@@ -1,6 +1,7 @@
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet, ConversationPaused, ConversationResumed, FollowupAction, SessionStarted, ActionExecuted
+from rasa_sdk.events import Restarted, SlotSet, ConversationPaused, ConversationResumed, FollowupAction, SessionStarted, ActionExecuted
+from typing import List, Dict, Any
 import random
 
 class ActionResetSlots(Action):
@@ -35,7 +36,7 @@ class ActionSetDrinkTypeAndTemperature(Action):
         drink_type = tracker.get_slot("drink_type")
 
         if drink_type == "아아":
-            dispatcher.utter_message(text="Setting drink type to 아메리카노 and temperature to 차갑게")
+            # dispatcher.utter_message(text="Setting drink type to 아메리카노 and temperature to 차갑게")
             return [
                 SlotSet("drink_type", "아메리카노"), 
                 SlotSet("temperature", "차갑게"), 
@@ -63,3 +64,12 @@ class ActionRecommendMenu(Action):
         dispatcher.utter_message(text=f"오늘의 추천 메뉴는 {recommended_menu}입니다! 한번 시도해보세요! 🍹")
         
         return [SlotSet("recommended_menu", recommended_menu)]
+
+
+class ActionRestartWithMessage(Action):
+    def name(self) -> str:
+        return "action_restart_with_message"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[str, Any]) -> List[Dict[str, Any]]:
+        dispatcher.utter_message(text="주문을 다시 시작할게요")
+        return [Restarted()]

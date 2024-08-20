@@ -6,6 +6,11 @@ rules:
     - intent: greet
     - action: utter_greet
 
+- rule: restart conversation and send message
+  steps:
+    - intent: restart_conversation
+    - action: action_restart_with_message
+
 - rule: Provide usage instructions
   steps:
     - intent: ask_how_to_use

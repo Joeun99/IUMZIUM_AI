@@ -169,4 +169,3 @@ stories:
   steps:
     - intent: ask_recommendation
     - action: action_recommend_menu
-    - action: utter_recommend_menu
