@@ -1,6 +1,7 @@
 ![Rasa Logo](https://github.com/user-attachments/assets/1646dc9b-ab28-4848-984a-844d9d6d0576)
 
 # 오픈소스 Rasa를 이용한 카페 주문 키오스크용 AI 챗봇 만들기</h1>
+![image](https://github.com/user-attachments/assets/71638153-78fe-4404-9ca1-029a1743cbe1)
 
 <p align="left">
   <img src="https://img.shields.io/github/last-commit/Joeun99/IUMZIUM_AI">
@@ -14,6 +15,7 @@
 챗봇은 자연어 처리(NLU)와 대화 관리(Core) 기능을 통해 사용자와 상호작용하며, 주문을 비롯한 다양한 고객 서비스를 제공할 수 있습니다.
 <br><br><br><br>
 
+
 ## 프로젝트 목표
 ### 1차 목표 (Basic Goal)
 - **자연어처리(NLU) Fine-tuning:** 챗봇을 통해 일반적으로 사용되는 음성 명령(메뉴, 명칭 등)에 맞춰 자연어 이해를 최적화
@@ -26,6 +28,12 @@
 - **키오스크 시스템 연동:** 실제 카페 키오스크 시스템과 챗봇을 연동하여 주문을 실시간으로 처리
 
 <br><br>
+
+
+
+
+
+
 
 ## 학습 자료 및 참고 링크
 - [Rasa Documentation](https://rasa.com/docs/)
