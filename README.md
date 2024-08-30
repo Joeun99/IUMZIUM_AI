@@ -1,4 +1,4 @@
-![Rasa Logo](https://github.com/user-attachments/assets/1646dc9b-ab28-4848-984a-844d9d6d0576)
+![image](https://github.com/user-attachments/assets/962fee80-59a3-4f6c-a8a5-1b2ae1a67da2)![Rasa Logo](https://github.com/user-attachments/assets/1646dc9b-ab28-4848-984a-844d9d6d0576)
 
 # 오픈소스 Rasa를 이용한 카페 주문 키오스크용 AI 챗봇 만들기</h1>
 ![image](https://github.com/user-attachments/assets/71638153-78fe-4404-9ca1-029a1743cbe1)
@@ -23,7 +23,9 @@
 - 디자인 : Figma
 <br><br>
 ## 🚀성과
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/fcec44e6-79df-4410-9dc9-cabada6f37d4)
+
+
 
 
 <br><br>
