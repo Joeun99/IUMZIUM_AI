@@ -3,16 +3,38 @@
 # 오픈소스 Rasa를 이용한 카페 주문 키오스크용 AI 챗봇 만들기</h1>
 ![image](https://github.com/user-attachments/assets/71638153-78fe-4404-9ca1-029a1743cbe1)
 
-<p align="left">
-  <img src="https://img.shields.io/github/last-commit/Joeun99/IUMZIUM_AI">
-  <img src="https://img.shields.io/github/contributors/Joeun99/IUMZIUM_AI">
-  <img src="https://img.shields.io/github/stars/Joeun99/IUMZIUM_AI?style=social">
-</p>
+## 🧑맴버구성
+- 곽민준 : 팀장 디자인, 프론트
+- 장조은 : 인공지능
+- 정인재 : 데이터, 백엔드
+- 강하은 : 디자인, 프론트
+<br><br>
+## ⏰개발 기간
+- 24-08-21~24-08-24
+<br><br>
+## 💻개발 환경
+- 개발환경 : Windows 10 
+- 개발언어 : javascript, Python 3.8
+- 개발 툴 : visual studio code
+- 라이브러리 : react, flask
+- 인공지능(챗봇): Rasa 3.6.2
+- 데이터베이스 툴 : mysql 8.0
+- 협업 툴 : git, github
+- 디자인 : Figma
+<br><br>
+## 🚀성과
+![Uploading image.png…]()
+
 
 <br><br>
-## 프로젝트 소개<br>
-오픈소스 Rasa를 활용하여 카페 주문 키오스크용 AI 챗봇을 개발하는 것을 목표로 합니다. <br>
-챗봇은 자연어 처리(NLU)와 대화 관리(Core) 기능을 통해 사용자와 상호작용하며, 주문을 비롯한 다양한 고객 서비스를 제공할 수 있습니다.
+## 🖥프로젝트 소개<br>
+기존 키오스크는 디지털 취약계층(고령자, 장애인 등)이 사용하기 불편합니다.
+![image](https://github.com/user-attachments/assets/73246304-1e75-4e0d-9114-7c18e0f0690a)
+![image](https://github.com/user-attachments/assets/81cdc155-5df5-4a9b-a3a6-30696e3930ce)
+
+
+그래서 오픈소스 Rasa를 활용하여 음성인식 카페 키오스크를 개발하였습다. <br>
+Rasa는 자연어 처리(NLU)와 대화 관리(Core) 기능을 통해 사용자와 상호작용하며, 주문을 비롯한 다양한 고객 서비스를 제공할 수 있습니다.
 <br><br><br><br>
 
 
@@ -29,9 +51,18 @@
 
 <br><br>
 
+## 기능 소개
+![image](https://github.com/user-attachments/assets/849ffa7c-bfe6-4b46-a327-8bfcfd814e46)
+![image](https://github.com/user-attachments/assets/924dddf1-5885-4f97-8e50-ddece054837f)
+![image](https://github.com/user-attachments/assets/b376db4b-7d28-4cb4-abf8-d22867c262c7)
+![image](https://github.com/user-attachments/assets/961c9921-14f5-4374-ac04-de6fd6aec841)
+![image](https://github.com/user-attachments/assets/9ac2af5c-9167-47f9-ac4d-a41a0198a864)
 
 
 
+
+## 시연 영상
+https://github.com/user-attachments/assets/1ac8415b-3f4f-4454-a1eb-d34688bc1055
 
 
 
